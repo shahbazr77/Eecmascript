@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press Key</title>
+    <style>
+        table, th, td {
+  border: 1px solid black;
+}
+        
+        
+    </style>
+
+</head>
+<body>
+    <h1>Press Key</h1>
+    <div id="insertArea"></div>
+</body>
+<script>    
+
+const insertArea = document.querySelector("#insertArea");
+
+  window.addEventListener("keydown",(e)=>{
+
+    insertArea.innerHTML = `
+     <table style="border: 1px solid black; width: 100%;">
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === " " ? "Space" : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table> `;
+
+  })
+
+
+
+
+</script>
+</html>

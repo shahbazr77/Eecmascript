@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai or code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    const stopInterval = document.querySelector("#stop");
+    const startInterval  = document.querySelector("#start");
+
+    const sayPakistan =function(str){
+        console.log(str,"new pakistan",Date.now());
+     }
+
+    const myInterval = setInterval(sayPakistan,3000,"Shahbaz");
+
+     stopInterval.addEventListener("click",function(e){
+        clearInterval(myInterval);
+     })
+
+     startInterval.addEventListener("click",function(e){
+        setInterval(sayPakistan,3000);
+     })
+
+    
+
+</script>
+
+
+</html>

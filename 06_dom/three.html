@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body>
+    
+</body style="background-color: #212121; color: #fff;">
+
+
+
+</body>
+<script>
+
+const div= document.createElement('div')
+console.log(div);
+div.className = "main"
+
+div.id = Math.round(Math.random() * 10 +1)
+
+div.setAttribute("title","generated title")
+div.style.backgroundColor = "green"
+div.style.padding = "20px"
+//div.innerText = "I Love Pakistan"
+const addText =document.createTextNode("I Love Pakistan")
+div.appendChild(addText)
+document.body.appendChild(div)
+</script>
+
+</script>
+</html>

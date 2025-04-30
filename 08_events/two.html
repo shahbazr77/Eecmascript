@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai or code</h1>
+    <button id="stop">Stop</button>
+    
+
+    <script>
+       
+       const changeh1 = document.querySelector("h1");
+       const storTime = document.querySelector("#stop");
+       
+       const changeText = function(){
+        document.querySelector("h1").innerHTML = "I love pakistan";
+       }
+
+       const stopTimer = setTimeout(changeText,5000);
+
+        const sayPakistan = function(){
+            console.log("new way Pakistan");
+            console.log("Stop the Timer");
+        }
+    //   setTimeout(function(){
+    //     console.log("I love pakistan");
+    //   },2000) 
+    
+    
+
+
+      setTimeout(sayPakistan,2000);
+
+     storTime.addEventListener("click",function(){
+        clearTimeout(stopTimer)
+     })
+
+
+
+
+    </script>
+</body>
+</html>

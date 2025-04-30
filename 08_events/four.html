@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randoe Color</title>
+</head>
+<body>
+    <h1>Random Color</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    let intervalId;
+    const start = document.querySelector("#start");
+    const stop = document.querySelector("#stop");
+    const body = document.querySelector("body");
+
+    const randdomeColor = function(){
+        const hex = '0123456789ABCDEF';
+    
+        let color = "#";
+        for(let i = 0 ; i<6;i++){
+            //console.log(Math.floor(Math.random()*16));
+           color += hex[Math.floor(Math.random()*16)];
+          
+        }
+        return color
+    }
+    // console.log(randdomeColor());
+
+//     const randonColorInterval = function(){
+//         body.style.backgroundColor = randdomeColor();
+//     }
+
+//    start.addEventListener("click", function(){
+//      interval = setInterval(randonColorInterval,1000);
+//     })
+
+//     stop.addEventListener("click", function(){
+//         console.log("stop");
+//         clearInterval(interval);
+//     })
+
+const starChangingColor = function(){
+    if(!intervalId){
+    intervalId = setInterval(changeBGColor,1000);
+    }
+
+    function changeBGColor(){
+        body.style.backgroundColor = randdomeColor();
+    }
+}
+const stopChangingColor = function(){
+    clearInterval(intervalId);
+    intervalId = null;
+}
+
+document.querySelector("#start").addEventListener("click",starChangingColor);
+
+document.querySelector("#stop").addEventListener("click",stopChangingColor);
+</script>
+</html>

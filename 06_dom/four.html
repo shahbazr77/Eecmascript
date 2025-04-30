@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+   
+    
+<ul class="languages">
+    <li>HTML</li>
+    
+</ul>
+
+</body>
+
+
+<script>
+    const languages = document.querySelector(".languages")
+    // function addLanguage(language){
+    // const li = document.createElement("li")
+    // li.innerHTML = `${language}`
+    //  document.querySelector(".languages").appendChild(li)
+    // }
+    //  addLanguage("CSS")
+    //  addLanguage("JavaScript")
+
+
+function addoptimizelanguage(language){
+    const li = document.createElement("li")
+   li.appendChild(document.createTextNode(language))
+   document.querySelector(".languages").appendChild(li);
+
+    
+}
+
+addoptimizelanguage("React");
+addoptimizelanguage("javascript");
+addoptimizelanguage("nodejs");
+addoptimizelanguage("express");
+addoptimizelanguage("mongodb");
+
+const secondLang = document.querySelector("li:nth-child(2)")
+//secondLang.innerHTML = "Mojo"
+const newli  = document.createElement("li")
+newli.textContent = "Sojooo"
+secondLang.replaceWith(newli);
+
+
+//new edit rule
+
+const firstchang = document.querySelector("li:first-child");
+firstchang.outerHTML = "<li>shahbaz</li>"
+
+
+//remove element
+
+const lastLang = document.querySelector("li:last-child");
+
+lastLang.remove();
+
+     
+
+
+
+     
+</script>
+
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141;color: aliceblue;">
+    
+<h2>Amaxing images</h2>
+<ul id="images">
+    <li><img width="200px" id="image6" src="https://picsum.photos/seed/picsum/200/300" alt="Image 8"></li>
+    <li><img width="200px" id="image7" src="https://picsum.photos/200/300" alt="Image 1">  </li>
+    <li><img width="200px" id="image8" src="https://picsum.photos/seed/picsum/200/300"  alt="Image 4"></li>
+    <li><a id="google" style="color: aliceblue;" href="https://www.google.com">Google</a></li>
+
+</ul>
+
+</body>
+
+<script>
+   //attachEvent()
+   //jquery-on
+
+    // document.getElementById('image4').onclick = function() {
+    //     alert('Hello World');
+    // }
+    //addEventlistener
+    // document.getElementById('images').addEventListener('click', function(e) {
+    
+    //     console.log(`clicked inside the images`)
+    
+    // },false);
+
+    // document.getElementById('image2').addEventListener('click', function(e) {
+    // console.log(`owl clicked`);
+    // e.stopPropagation();
+    // },false);
+
+    //    document.getElementById('google').addEventListener('click',function(e){
+    //     console.log(`google clicked`);
+    //     e.preventDefault();
+    //     e.stopPropagation();
+        
+    // })
+
+
+//type,timestamp,defaultPrevented,target,toElement,srcElement,currentTarget,clientX,clientY,screenX,ScreenY,
+//altkey,ctrlkey,shiftkey,keyCode,button,buttons,relatedTarget,pageX,pageY,which,metaKey,view,detail,touches,targetTouches,
+
+
+       document.querySelector("#images").addEventListener('click',function(e){
+       // console.log(e.target.parentNode);
+    
+       if(e.target.tagName === "IMG"){
+        //console.log(e.target.id);
+
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+       }
+
+       },false)
+
+
+</script>
+
+
+
+</html>
